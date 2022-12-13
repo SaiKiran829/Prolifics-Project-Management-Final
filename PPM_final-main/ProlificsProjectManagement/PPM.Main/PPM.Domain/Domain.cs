@@ -211,23 +211,3 @@ public class RoleManagement
 }
 }
 
-// public class AddingEmptoProject
-// {
-//     //public List<AddEmptoProject> AddingEmplist = new List<AddEmptoProject>();
-
-//     public void addingemp(AddEmptoProject add)
-//     {
-//         AddingEmplist.Add(add);
-//     }
-    
-    
-    
-//     public void displayingemp()
-//     {
-//         foreach (AddEmptoProject e in AddingEmplist)
-//         {
-//             Console.WriteLine("Project list with employees \nName of the project - "+e.ProjectName+ "\n projectmembers - "+e.EMPfirstName);
-//         }
-//     }
-// }
-// }
