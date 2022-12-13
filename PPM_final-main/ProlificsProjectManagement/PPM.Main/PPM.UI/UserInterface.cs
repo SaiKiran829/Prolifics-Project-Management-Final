@@ -163,6 +163,8 @@ namespace PPM.Main.PPM.UI
                     break;
 
                 case "3":
+                tryagain:
+                try{
                     Console.WriteLine("");
                     Console.WriteLine("");
                     inputempid:
@@ -309,10 +311,38 @@ namespace PPM.Main.PPM.UI
                         Console.WriteLine("Try again");
                         goto Opt;
                     }
+                }
+                catch(FormatException e){
+                    Console.WriteLine("Id can only be in numbers");
+                    Console.WriteLine("");
+                    Console.WriteLine("Enter any key to try again");
+                    Console.WriteLine("Enter \"x\" to get to main menu");
+                    string EmpIdTry = Console.ReadLine();
+                    if(EmpIdTry == "x"){
+                        goto breaking;
+                    }
+                    else{
+                        goto tryagain;
+                    }
+                }
+                catch(Exception e){
+                    Console.WriteLine("Invalid Entry");
+                    Console.WriteLine("");
+                    Console.WriteLine("Enter any key to try again");
+                    Console.WriteLine("Enter \"x\" to get to main menu");
+                    string EmpIdTry1 = Console.ReadLine();
+                    if(EmpIdTry1 == "x"){
+                        goto breaking;
+                    }
+                    else{
+                        goto tryagain;
+                    }
+                }
                             
                             Console.WriteLine("");
                             Console.WriteLine("Enter any key to get to main menu");
                             Console.ReadLine();
+                            breaking:
                             break;
                 case "4":
                     obj1.ShowEmp();
@@ -356,6 +386,7 @@ namespace PPM.Main.PPM.UI
                         catch (Exception e)
                     {
                         Console.WriteLine("Role Id can only be in numbers");
+                        Console.ReadLine();
                     }
                     break;
 
@@ -477,6 +508,8 @@ namespace PPM.Main.PPM.UI
         Console.WriteLine("");
         Console.Write("Enter \"9\" to add employees to project      ");
         Console.WriteLine("Enter \"10\" to view projects with employees");
+        Console.WriteLine("");
+        Console.WriteLine("Enter \"11\" to delete employee from project");
         Console.WriteLine("");
         Console.WriteLine("                           Enter \"x\" to exit application");
         read = Console.ReadLine();
