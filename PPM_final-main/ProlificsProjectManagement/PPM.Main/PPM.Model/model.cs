@@ -84,25 +84,3 @@ public class Role
 
     }
 }
-
-// public class AddEmptoProject
-// {
-
-//     public string ProjectName { get; set; }
-//     public string EMPfirstName { get; set; }
-//     // public AddEmptoProject(string projectName, string empfirstname)
-//     // {
-
-//     //     this.ProjectName = projectName;
-//     //     this.EMPfirstName = empfirstname;
-
-//     //     }
-
-//     // public AddEmptoProject()
-//     // {
-       
-//     // }
-// }
-
-    
-}
